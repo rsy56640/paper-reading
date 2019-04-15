@@ -41,6 +41,8 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
 
 ![](assets/term_duration.png)
 
+![](assets/state.png)
+
 ### 每个 server 的 state
 - 被持久化在 server 上的数据
   - **currentTerm**：见到的最大的 term
@@ -52,6 +54,8 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
 - 在 leader 内存中的数据（每次 election 后初始化）
   - **nextIndex[]**：`nextIndex[i]` 表示发送给 `server[i]` 的下一个 log index
   - **matchIndex[]**：`matchIndex[i]` 表示同步到 `server[i]` 的最大 index
+
+![](assets/rule_for_server.png)
 
 ### Server 执行
 - 所有 server
@@ -77,6 +81,8 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
     - 如果因为 log inconsistent 失败，**nextIndex[i]--** 并 retry
   - 如果存在一个 N 使得 (1) N >**commitIndex**，(2) majority **matchIndex[i]** >= N，并且 (3) **log[N].term** == **currentTerm**，就设置 **commitIndex** = N
 
+![](assets/requestVoteRPC.png)
+
 ### Vote 规则
 - 参数
   - **term**
@@ -89,6 +95,8 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
 - vote 规则
   - reject 如果 *Candidate*.**term** < **currentTerm**
   - 如果 **self.votedFor** 为 **null** 或者 **candidateId**，并且 *Candidate*.log 不旧于自己（已 commit 的），就 vote（**votedFor** 为 **candidateId** 还要再发，是因为 *消息可能乱序*）
+
+![](assets/AppenLogRPC.png)
 
 ### Append-Log RPC
 - 参数
