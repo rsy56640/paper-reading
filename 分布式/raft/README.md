@@ -80,6 +80,7 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
     - 如果成功，更新 **nextIndex[i]**
     - 如果因为 log inconsistent 失败，**nextIndex[i]--** 并 retry
   - 如果存在一个 N 使得 (1) N >**commitIndex**，(2) majority **matchIndex[i]** >= N，并且 (3) **log[N].term** == **currentTerm**，就设置 **commitIndex** = N
+      - 注意到当 leader 更新 commit 时就可以 apply 到自己的 state machine 了；更新 commit 之后的 AppendLogRPC 中会带有这个新的 commitedIndex。这里有一个细微的点需要考虑：即使 leader 这时 crash 或者 network 原因导致这个新 commitedIndex 消息丢失（而 leader 已经向 client 返回成功），大多数 server 最终还是会 commit。
 
 ![](assets/requestVoteRPC.png)
 
@@ -94,7 +95,7 @@ Paxos 让每个 instance 独立，所以还需要合并成 sequential log；应�
   - **voteGranted**：bool 值，表明是否 vote
 - vote 规则
   - reject 如果 *Candidate*.**term** < **currentTerm**
-  - 如果 **self.votedFor** 为 **null** 或者 **candidateId**，并且 *Candidate*.log 不旧于自己（已 commit 的），就 vote（**votedFor** 为 **candidateId** 还要再发，是因为 *消息可能乱序*）
+  - 如果 **self.votedFor** 为 **null** 或者 **candidateId**，并且 *Candidate*.log 不旧于自己，就 vote（**votedFor** 为 **candidateId** 还要再发，是因为 *消息可能乱序*）
 
 ![](assets/AppenLogRPC.png)
 
@@ -154,6 +155,7 @@ commit 一定是超过半数的结点通过，那么只要注意到最后一波 
 - [mit6.824 Lecture 5: Raft](https://pdos.csail.mit.edu/6.824/notes/l-raft.txt)
 - [mit6.824 Raft FAQ](https://pdos.csail.mit.edu/6.824/papers/raft-faq.txt)
 - [Raft算法原理 - codedump](https://www.codedump.info/post/20180921-raft/)
+- [Raft共识算法 - Calvin's Marbles](http://www.calvinneo.com/2019/03/12/raft-algorithm/)
 - [Raft 一致性协议](https://zhuanlan.zhihu.com/p/29678067)
 - [Raft一致性算法 - B LOG](http://ts25504.github.io/2017/03/19/Raft%E4%B8%80%E8%87%B4%E6%80%A7%E7%AE%97%E6%B3%95/)
 - [Raft Q&A](https://thesquareplanet.com/blog/raft-qa/)
