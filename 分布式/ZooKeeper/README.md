@@ -85,8 +85,19 @@
       - 在空闲期，client 在 timeout/3 处发送 heartbeat 给 server，如果之后的 timeout*2/3 没有收到回复，那么就换 server
 
 
+## ZAB 协议
+
+
+
+
 ## Reference
 
 - [论文研读之ZooKeeper](https://oven-yang.github.io/%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB/paper-zookeeper/)
 - [论文研读之Zab协议](https://oven-yang.github.io/%E8%AE%BA%E6%96%87%E7%A0%94%E8%AF%BB/paper-zab/)
 - [ZooKeeper: Wait-free coordination for Internet-scale systems（笔记）](https://www.jianshu.com/p/73556607b828)
+
+### ZAB reference
+
+- [zookeeper 入门系列 – 理论基础 – zab 协议](http://www.importnew.com/28433.html)
+- [ZooKeeper之ZAB协议](http://www.solinx.co/archives/435)
+- [ZooKeeper’s atomic broadcast protocol: Theory and practice](http://www.tcs.hut.fi/Studies/T-79.5001/reports/2012-deSouzaMedeiros.pdf)
