@@ -59,7 +59,7 @@
   - active：正常处理
     - 若 endfield 已经有其他 txnid，则 abort-restart
   - 结束后获取 commit-ts，原子更新（状态，commit-ts）->（prepare，commit-ts）
-  - >>> *潜在的 bug*：获取 commit-ts 和 原子更新 是两步操作！！！有可能在中间一个读操作进来了，但其实 读ts > commit-ts；这时，读操作发现是 active state，命中 old version，但其实应该是 new version。（发生这种情况的可能性：写操作在获取 commit-ts 之后被内核调度了，然后一个新事务启动，其 begin-ts > commit-ts，进入 index，进入 version chain，发现txnID，拿着txnID去读状态，发现是 active）
+  - > 潜在的 bug：获取 commit-ts 和 原子更新 是两步操作！！！有可能在中间一个读操作进来了，但其实 读ts > commit-ts；这时，读操作发现是 active state，命中 old version，但其实应该是 new version。（发生这种情况的可能性：写操作在获取 commit-ts 之后被内核调度了，然后一个新事务启动，其 begin-ts > commit-ts，进入 index，进入 version chain，发现txnID，拿着txnID去读状态，发现是 active）
   - prepare
       - validation（单线程，瓶颈？？）
           - read set
