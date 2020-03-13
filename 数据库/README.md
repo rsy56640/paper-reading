@@ -13,8 +13,8 @@
 <a id="arch"></a>
 ## Architecture
 
-- [System R - Relational Approach to Database Management](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/System%20R%20-%20Relational%20Approach%20to%20Database%20Management)
-- [Architecture of a Database System](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Architecture%20of%20a%20Database%20System)
+- [System R - Relational Approach to Database Management](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/System%20R%20-%20Relational%20Approach%20to%20Database%20Management) todo
+- [Architecture of a Database System](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Architecture%20of%20a%20Database%20System) todo
 - [Socrates - The New SQL Server in the Cloud](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Socrates%20-%20The%20New%20SQL%20Server%20in%20the%20Cloud)
 
 
@@ -29,12 +29,42 @@
 <a id="query"></a>
 ## Query
 
+- [MonetDB/X100: Hyper-Pipelining Query Execution](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/MonetDB%20X100%20-%20Hyper-Pipelining%20Query%20Execution)
+  - 在现代体系结构下对控制流和数据流的思考
 - [Scan Primitives for Vector Computers](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Scan%20Primitives%20for%20Vector%20Computers)
 - [Adaptive Execution of Compiled Queries](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Adaptive%20Execution%20of%20Compiled%20Queries)
+
+#### Vectorization
 - [Everything You Always Wanted to Know About Compiled and Vectorized Queries But Were Afraid to Ask](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Everything%20You%20Always%20Wanted%20to%20Know%20About%20Compiled%20and%20Vectorized%20Queries%20But%20Were%20Afraid%20to%20Ask)
 - [A Vectorized Hash-Join](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/A%20Vectorized%20Hash-Join)
+  - histogram, rank and permute
 - [Vectorization vs. Compilation in Query Execution](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Vectorization%20vs.%20Compilation%20in%20Query%20Execution)
+  - 向量化执行的具体细节，原论文 [Just-in-time Compilation in Vectorized Query Execution]()
 - [Rethinking SIMD Vectorization for In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Rethinking%20SIMD%20Vectorization%20for%20In-Memory%20Databases)
+  - 向量化执行具体细节和大量实验
+
+#### Code Generation
+- [Efficiently Compiling Efficient Query Plans for Modern Hardware](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Efficiently%20Compiling%20Efficient%20Query%20Plans%20for%20Modern%20Hardware)
+  - 分析 codegen 控制流 produce/consume
+- [Relaxed Operator Fusion for In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Relaxed%20Operator%20Fusion%20for%20In-Memory%20Databases)
+  - 从 query tree 分割 pipeline
+- [Push vs Pull-Based Loop Fusion in Query Engines](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Push%20vs%20Pull-Based%20Loop%20Fusion%20in%20Query%20Engines)
+
+#### Join
+- [Optimizing Main-MemoryJoin on Modern Hardware](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Optimizing%20Main-MemoryJoin%20on%20Modern%20Hardware) 构建 memory access 测量模型
+- [Sort vs. Hash Revisited - Fast Join Implementation on Modern Multi-Core CPUs](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Sort%20vs.%20Hash%20Revisited%20-%20Fast%20Join%20Implementation%20on%20Modern%20Multi-Core%20CPUs)
+  - hash join 和 sort merge join 的方案
+- [Multi-Core, Main-Memory Joins - Sort vs. Hash Revisited](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Multi-Core%2C%20Main-Memory%20Joins%20-%20Sort%20vs.%20Hash%20Revisited)
+- [Efficient Main-Memory Hash Joins on Multi-Core CPUs](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Efficient%20Main-Memory%20Hash%20Joins%20on%20Multi-Core%20CPUs)
+  - 分析 hash join 的各种方案
+- [Design and Evaluation of Main Memory Hash Join Algorithms for Multi-core CPUs](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Design%20and%20Evaluation%20of%20Main%20Memory%20Hash%20Join%20Algorithms%20for%20Multi-core%20CPUs)
+  - no-partition hash join 值得使用，除了 cache/TLB miss 也要关注 computation 和 synchronization，实验挺丰富
+- [Main-Memory Hash Joins on Multi-Core CPUs: Tuning to the Underlying Hardware](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Main-Memory%20Hash%20Joins%20on%20Multi-Core%20CPUs%20-%20Tuning%20to%20the%20Underlying%20Hardware) hash join 的各种实验
+- [Improving Main Memory Hash Joins on Intel Xeon Phi Processors: An Experimental Approach](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Improving%20Main%20Memory%20Hash%20Joins%20on%20Intel%20Xeon%20Phi%20Processors%20-%20An%20Experimental%20Approach) 优化实验论文
+- [Massively Parallel NUMA-aware Hash Joins](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Massively%20Parallel%20NUMA-aware%20Hash%20Joins)
+- [Massively Parallel Sort-Merge Joins in Main Memory Multi-Core Database Systems](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Massively%20Parallel%20Sort-Merge%20Joins%20in%20Main%20Memory%20Multi-Core%20Database%20Systems)
+  - NUMA 场景下 sort join 的细节以及实验对比（文中的 **parallel partition** 方案讲得很细）
+  - 对于 **partition skew** 的处理
 
 
 &nbsp;   
@@ -59,7 +89,7 @@
 <a id="recovery"></a>
 ## Log & Recovery
 
-- [ARIES](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/ARIES)
+- [ARIES](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/ARIES) todo
 - [Constant Time Recovery in Azure SQL Database](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Constant%20Time%20Recovery%20in%20Azure%20SQL%20Database)
 
 
