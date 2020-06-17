@@ -4,7 +4,7 @@
 - [NSM & DSM](#storage-model)
 - [Query](#query)
 - [Index](#index)
-- [Concurrency Control](cc)
+- [Concurrency Control](#cc)
 - [Log & Recovery](#recovery)
 - [GC](#gc)
 
