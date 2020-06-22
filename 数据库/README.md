@@ -51,6 +51,7 @@
 - [Push vs Pull-Based Loop Fusion in Query Engines](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Push%20vs%20Pull-Based%20Loop%20Fusion%20in%20Query%20Engines)
 
 #### Join
+- [Analysis of Two Existing and One New Dynamic Programming Algorithm for the Generation of Optimal Bushy Join Trees without Cross Products]() todo
 - [Optimizing Main-MemoryJoin on Modern Hardware](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Optimizing%20Main-MemoryJoin%20on%20Modern%20Hardware) 构建 memory access 测量模型
 - [Sort vs. Hash Revisited - Fast Join Implementation on Modern Multi-Core CPUs](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Sort%20vs.%20Hash%20Revisited%20-%20Fast%20Join%20Implementation%20on%20Modern%20Multi-Core%20CPUs)
   - hash join 和 sort merge join 的方案
@@ -85,6 +86,8 @@
 - [Staring into the Abyss - An Evaluation of Concurrency Control with One Thousand Cores](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Staring%20into%20the%20Abyss%20-%20An%20Evaluation%20of%20Concurrency%20Control%20with%20One%20Thousand%20Cores)
 - [Fast Serializable Multi-Version Concurrency Control for Main-Memory Database Systems](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Fast%20Serializable%20Multi-Version%20Concurrency%20Control%20for%20Main-Memory%20Database%20Systems)
 - [High-Performance Concurrency Control Mechanisms for Main-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/High-Performance%20Concurrency%20Control%20Mechanisms%20for%20Main-Memory%20Databases)
+- [Speedy Transactions in Multicore In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Speedy%20Transactions%20in%20Multicore%20In-Memory%20Databases)
+  - epoch-based group txn
 
 
 &nbsp;   
