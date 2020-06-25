@@ -5,6 +5,7 @@
 - [Query](#query)
 - [Index](#index)
 - [Concurrency Control](#cc)
+- [Buffer Pool](#buffer)
 - [Log & Recovery](#recovery)
 - [GC](#gc)
 
@@ -88,6 +89,14 @@
 - [High-Performance Concurrency Control Mechanisms for Main-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/High-Performance%20Concurrency%20Control%20Mechanisms%20for%20Main-Memory%20Databases)
 - [Speedy Transactions in Multicore In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Speedy%20Transactions%20in%20Multicore%20In-Memory%20Databases)
   - epoch-based group txn
+
+
+&nbsp;   
+<a id="buffer"></a>
+## Buffer Pool
+
+- [Anti-Caching: A New Approach to Database Management System Architecture](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Anti-Caching%20-%20A%20New%20Approach%20to%20Database%20Management%20System%20Architecture)
+  - 将纵向的 dbpage fault sync fetch 改为水平化的 async fetch
 
 
 &nbsp;   
