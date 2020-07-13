@@ -75,7 +75,8 @@
 <a id="index"></a>
 ## Index
 
-
+- [Easy Lock-Free Indexing in Non-Volatile Memory](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Easy%20Lock-Free%20Indexing%20in%20Non-Volatile%20Memory)
+  - persistent multi-word CAS 给 concurrent index 更好支持
 
 
 &nbsp;   
