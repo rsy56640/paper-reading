@@ -90,6 +90,14 @@
 - [High-Performance Concurrency Control Mechanisms for Main-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/High-Performance%20Concurrency%20Control%20Mechanisms%20for%20Main-Memory%20Databases)
 - [Speedy Transactions in Multicore In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Speedy%20Transactions%20in%20Multicore%20In-Memory%20Databases)
   - epoch-based group txn
+- [No Compromises - Distributed Transactions with Consistency, Availability, and Performance](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/No%20Compromises%20-%20Distributed%20Transactions%20with%20Consistency%2C%20Availability%2C%20and%20Performance)
+  - FaRM V1，不需要使用全局时间戳，使用 seqlock，concurrent validation
+- [Fast General Distributed Transactions with Opacity](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/Fast%20General%20Distributed%20Transactions%20with%20Opacity)
+  - FaRM V2，相比 V1，加入了时钟同步，因此有了 Multi-Version
+  - 没有说明 index 怎么搞，这是一个难点
+- [Fast and General Distributed Transactions using RDMA and HTM](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/Fast%20and%20General%20Distributed%20Transactions%20using%20RDMA%20and%20HTM)
+  - distributed transaction 和 FaRM V1 类似，使用 HTM 替代了 local write lock，但是要补上 remote read lock
+  - index 是每个存储节点自己维护，对外提供 KV 接口
 
 
 &nbsp;   
