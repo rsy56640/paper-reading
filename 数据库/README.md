@@ -8,6 +8,7 @@
 - [Buffer Pool](#buffer)
 - [Log & Recovery](#recovery)
 - [GC](#gc)
+- [NVM](#nvm)
 
 
 &nbsp;   
@@ -126,6 +127,8 @@
 
 
 &nbsp;   
-<a id=""></a>
+<a id="nvm"></a>
+## NVM
 
-
+- [nvm_malloc: Memory Allocation for NVRAM](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/nvm%20malloc%20-%20Memory%20Allocation%20for%20NVRAM)
+  - 没有搞懂具体怎么 recovery，是 WAL 思路么？
