@@ -89,6 +89,9 @@
 - [Staring into the Abyss - An Evaluation of Concurrency Control with One Thousand Cores](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Staring%20into%20the%20Abyss%20-%20An%20Evaluation%20of%20Concurrency%20Control%20with%20One%20Thousand%20Cores)
 - [Fast Serializable Multi-Version Concurrency Control for Main-Memory Database Systems](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Fast%20Serializable%20Multi-Version%20Concurrency%20Control%20for%20Main-Memory%20Database%20Systems)
 - [High-Performance Concurrency Control Mechanisms for Main-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/High-Performance%20Concurrency%20Control%20Mechanisms%20for%20Main-Memory%20Databases)
+  - 内存事务引擎
+  - MVOCC 有 bug，本质原因是 “获得 commit-ts” 和 “对外展示 commit-ts” 这两个操作并非原子的，可以使用 HTM 解决
+  - 注意到 concurrent validation
 - [Speedy Transactions in Multicore In-Memory Databases](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Speedy%20Transactions%20in%20Multicore%20In-Memory%20Databases)
   - epoch-based group txn
 - [No Compromises - Distributed Transactions with Consistency, Availability, and Performance](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/No%20Compromises%20-%20Distributed%20Transactions%20with%20Consistency%2C%20Availability%2C%20and%20Performance)
@@ -96,6 +99,9 @@
 - [Fast General Distributed Transactions with Opacity](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/Fast%20General%20Distributed%20Transactions%20with%20Opacity)
   - FaRM V2，相比 V1，加入了时钟同步，因此有了 Multi-Version
   - 没有说明 index 怎么搞，这是一个难点
+- [Fast In-memory Transaction Processing using RDMA and HTM](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/Fast%20In-memory%20Transaction%20Processing%20using%20RDMA%20and%20HTM)
+  - 使用 HTM 的一个原因居然是 RDMA CAS 与 local CAS 不兼容
+  - 使用 expired time 作为 shared lock
 - [Fast and General Distributed Transactions using RDMA and HTM](https://github.com/rsy56640/paper-reading/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F/content/Fast%20and%20General%20Distributed%20Transactions%20using%20RDMA%20and%20HTM)
   - distributed transaction 和 FaRM V1 类似，使用 HTM 替代了 local write lock，但是要补上 remote read lock
   - index 是每个存储节点自己维护，对外提供 KV 接口
