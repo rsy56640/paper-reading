@@ -18,6 +18,7 @@
 - [System R - Relational Approach to Database Management](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/System%20R%20-%20Relational%20Approach%20to%20Database%20Management) todo
 - [Architecture of a Database System](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Architecture%20of%20a%20Database%20System) todo
 - [Socrates - The New SQL Server in the Cloud](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Socrates%20-%20The%20New%20SQL%20Server%20in%20the%20Cloud)
+  - 沿用 Aurora 的思路 log is db，存储层扩展，展望计算层扩展
 
 
 &nbsp;   
