@@ -21,4 +21,5 @@
 ### TLB & Page table
 
 - [Design tradeoffs for software-managed TLBs](https://dl.acm.org/doi/10.1145/165123.165127)
+- [Reverse Engineering Hardware Page Table Caches Using Side-Channel Attacks on the MMU](https://download.vusec.net/papers/revanc_ir-cs-77.pdf) 对 Page Table Cache 做 EVICT+TIME
 
