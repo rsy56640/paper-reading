@@ -13,6 +13,10 @@
 
 - [A Survey of Side-Channel Attacks on Caches and Countermeasures](https://link.springer.com/article/10.1007/s41635-017-0025-y) 通过测量 cache timing 来获取关键数据
 
+### Replacement Policy
+
+- [High performance cache replacement using re-reference interval prediction (RRIP)](https://dl.acm.org/doi/abs/10.1145/1815961.1815971) RRIP 探讨 mixed cache access pattern 以及 re-reference interval 更新策略
+
 <a id="memory"></a>
 ## Memory
 
