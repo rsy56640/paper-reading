@@ -26,4 +26,5 @@
 
 - [Design tradeoffs for software-managed TLBs](https://dl.acm.org/doi/10.1145/165123.165127)
 - [Reverse Engineering Hardware Page Table Caches Using Side-Channel Attacks on the MMU](https://download.vusec.net/papers/revanc_ir-cs-77.pdf) 对 Page Table Cache 做 EVICT+TIME
+- [Translation caching: skip, don't walk (the page table) 笔记](https://github.com/rsy56640/paper-reading/tree/master/%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/content/Translation%20Caching%20-%20Skip%2C%20Don%E2%80%99t%20Walk%20(the%20Page%20Table)) MMU cache 加速 page table walk
 
