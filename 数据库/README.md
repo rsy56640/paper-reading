@@ -19,12 +19,14 @@
 - [Architecture of a Database System](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Architecture%20of%20a%20Database%20System) todo
 - [Socrates - The New SQL Server in the Cloud](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Socrates%20-%20The%20New%20SQL%20Server%20in%20the%20Cloud)
   - 沿用 Aurora 的思路 log is db，存储层扩展，展望计算层扩展
+- [Transaction Processing on Modern Hardware 读书笔记](https://github.com/rsy56640/Database_Learning/tree/master/Transaction%20Processing%20on%20Modern%20Hardware%20%E7%AC%94%E8%AE%B0)
 
 
 &nbsp;   
 <a id="storage-model"></a>
 ## NSM & DSM
 
+- [The Design and Implementation of Modern Column-Oriented Database Systems 笔记](https://github.com/rsy56640/Database_Learning/tree/master/The%20Design%20and%20Implementation%20of%20Modern%20Column-Oriented%20Database%20Systems%20%E7%AC%94%E8%AE%B0)
 - [Column-Stores vs. Row-Stores - How Different Are They Really](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Column-Stores%20vs.%20Row-Stores%20-%20How%20Different%20Are%20They%20Really)
 - [Vectorwise: Beyond Column Stores](https://www.semanticscholar.org/paper/Vectorwise%3A-Beyond-Column-Stores-Zukowski-Boncz/fbfa8536bdda504166c5097dae47b51256dfc404) 架构和发展历程
 
@@ -138,5 +140,6 @@
 <a id="nvm"></a>
 ## NVM
 
+- [Non-Volatile Memory Database Management Systems 笔记](https://github.com/rsy56640/Database_Learning/tree/master/Non-Volatile%20Memory%20Database%20Management%20Systems%20%E7%AC%94%E8%AE%B0)
 - [nvm_malloc: Memory Allocation for NVRAM](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/nvm%20malloc%20-%20Memory%20Allocation%20for%20NVRAM)
   - 没有搞懂具体怎么 recovery，是 WAL 思路么？

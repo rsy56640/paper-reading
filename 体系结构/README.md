@@ -4,10 +4,15 @@
 - [Cache](#cache)
 - [Memory](#memory)
 
+
+&nbsp;  
 <a id="cpu"></a>
 ## CPU
 
+- [Processor Microarchitecture an Implementation Perspective 读书笔记](https://github.com/rsy56640/Computer_Architecture_learning/tree/master/Processor%20Microarchitecture%20An%20Implementation%20Perspective%20%E7%AC%94%E8%AE%B0)
 
+
+&nbsp;  
 <a id="cache"></a>
 ## Cache
 
@@ -17,6 +22,8 @@
 
 - [High performance cache replacement using re-reference interval prediction (RRIP)](https://dl.acm.org/doi/abs/10.1145/1815961.1815971) RRIP 探讨 mixed cache access pattern 以及 re-reference interval 更新策略
 
+
+&nbsp;  
 <a id="memory"></a>
 ## Memory
 
