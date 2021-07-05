@@ -26,6 +26,7 @@
 ## NSM & DSM
 
 - [Column-Stores vs. Row-Stores - How Different Are They Really](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Column-Stores%20vs.%20Row-Stores%20-%20How%20Different%20Are%20They%20Really)
+- [Vectorwise: Beyond Column Stores](https://www.semanticscholar.org/paper/Vectorwise%3A-Beyond-Column-Stores-Zukowski-Boncz/fbfa8536bdda504166c5097dae47b51256dfc404) 架构和发展历程
 
 
 &nbsp;   
