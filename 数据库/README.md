@@ -144,3 +144,4 @@
 - [Non-Volatile Memory Database Management Systems 笔记](https://github.com/rsy56640/Database_Learning/tree/master/Non-Volatile%20Memory%20Database%20Management%20Systems%20%E7%AC%94%E8%AE%B0)
 - [nvm_malloc: Memory Allocation for NVRAM](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/nvm%20malloc%20-%20Memory%20Allocation%20for%20NVRAM)
   - 没有搞懂具体怎么 recovery，是 WAL 思路么？
+- [Distributed shared persistent memory](https://dl.acm.org/doi/10.1145/3127479.3128610) 讨论 design space 和新介质与应用交互的形态
