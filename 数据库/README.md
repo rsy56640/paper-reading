@@ -128,6 +128,7 @@
 - [Constant Time Recovery in Azure SQL Database](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Constant%20Time%20Recovery%20in%20Azure%20SQL%20Database)
 - [Write-Behind Logging](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Write-Behind%20Logging)
   - DTT 不记录 after-image，使用 group commit，形成天然的 checkpoint
+- [Scalable database logging for multicores](https://dl.acm.org/doi/10.14778/3149193.3149195) 多生产者流推进
 
 
 &nbsp;   
