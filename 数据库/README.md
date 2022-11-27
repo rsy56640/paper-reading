@@ -9,6 +9,7 @@
 - [Log & Recovery](#recovery)
 - [GC](#gc)
 - [NVM](#nvm)
+- [HTAP](#htap)
 
 
 &nbsp;   
@@ -147,3 +148,10 @@
 - [nvm_malloc: Memory Allocation for NVRAM](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/nvm%20malloc%20-%20Memory%20Allocation%20for%20NVRAM)
   - 没有搞懂具体怎么 recovery，是 WAL 思路么？
 - [Distributed shared persistent memory](https://dl.acm.org/doi/10.1145/3127479.3128610) 讨论 design space 和新介质与应用交互的形态
+
+
+&nbsp;   
+<a id="htap"></a>
+## HTAP
+
+- [Diva：Making MVCC Systems HTAP-Friendly 论文笔记](https://github.com/rsy56640/paper-reading/tree/master/%E6%95%B0%E6%8D%AE%E5%BA%93/content/Diva%20-%20Making%20MVCC%20Systems%20HTAP-Friendly) 版本搜索与版本回收分开，构建临时索引，提供快速检索和分离的异步清理的能力
