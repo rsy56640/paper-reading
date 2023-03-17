@@ -168,3 +168,4 @@ DIVA 通过分离版本搜索和版本清理并分别优化，帮助 MVCC DBMS �
 ## REFERENCE
 
 - [有slide](https://www.zhihu.com/question/524369148/answer/2673645895)
+- [Long-lived Transactions 产生的影响 - 内核月报](http://mysql.taobao.org/monthly/2023/02/03/)
